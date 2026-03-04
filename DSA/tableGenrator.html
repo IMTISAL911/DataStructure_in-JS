@@ -7,12 +7,25 @@
 </head>
 <body>
     
-    <Script>
-        let num = parseInt(prompt("enter the number for table:"));
+    <input type="text"  id="table" placeholder="enter the number for table:"/>
+    <button onclick="tablegenrator()">GENRATE</button>
 
+    <Script>
+
+     function tablegenrator (){
+
+        let num = parseInt(document.getElementById("table").value);
         for(let i=1; i<=10; i++){
             console.log(num + " X " + i + " = " + (num * i));
+            // num =""
         }
+     }
+
+        // let num = parseInt(prompt("enter the number for table:"));
+
+        // for(let i=1; i<=10; i++){
+        //     console.log(num + " X " + i + " = " + (num * i));
+        // }
     </Script>
 </body>
 </html>
