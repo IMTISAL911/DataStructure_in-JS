@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,5 +27,57 @@
         //     console.log(num + " X " + i + " = " + (num * i));
         // }
     </Script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Generator</title>
+</head>
+<body>
+
+<input type="text" id="table" placeholder="Enter number for table">
+<button id="genBtn" onclick="tablegenrator()" disabled>GENERATE</button>
+
+<script>
+const input = document.getElementById("table");
+const btn = document.getElementById("genBtn");
+
+// ✅ Enable/disable button based on input
+input.addEventListener("input", function () {
+    btn.disabled = input.value.trim() === "";
+});
+
+function tablegenrator() {
+    const value = input.value.trim();
+
+    // ✅ Validate only numbers
+    if (!/^\d+$/.test(value)) {
+        alert("Please enter a valid number");
+        input.value = "";   // clear input
+        btn.disabled = true;
+        return;
+    }
+
+    const num = parseInt(value);
+
+    console.clear();  // clear previous table
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${num} X ${i} = ${num * i}`);
+    }
+
+    // ✅ Clear input and disable button after generating table
+    input.value = "";
+    btn.disabled = true;
+}
+</script>
+
 </body>
 </html>
