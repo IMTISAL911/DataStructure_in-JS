@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Index</title>
+</head>
+<body>
+
+<input id="input" type="text" placeholder="enter number to search">
+<button onclick="findIndex()">Find</button>
+
+<script>
+function findIndex() {
+    let num = Number(document.getElementById("input").value);
+    let data = [8,4,5,6,7,9,10];
+    let foundIndex = -1;
+
+    for (let i = 0; i < data.length; i++) {
+        if (data[i] === num) {
+            foundIndex = i;
+            break;
+        }
+    }
+
+    console.log("FOUND index:", foundIndex);
+}
+</script>
+
+</body>
+</html>

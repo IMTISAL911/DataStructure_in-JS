@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array treversing</title>
+</head>
+<body>
+    <h1>TRAVERSING ARRAY</h1>
+    <input type="text" id="ele" />
+    <button onclick="getElement()">GET elment</button>
+
+    <script>
+        let array = [9,23,4,5,6,7,8,10,12,13,14,15,16]
+        // for (let i =0 ; i<array.length; i++){
+        //     document.write(`array ${i} is ${array[i]} <br>`)
+        // }
+
+        function getElement(){
+            // alret("function called")
+let elment = document.getElementById("ele").value
+            if(elment === ""){
+    
+                alert("enter the the value")
+            }
+            else if(elment < array.length){
+                console.log(array[elment])
+            }
+            else{
+                alert("please enter the valid number!")
+            }
+
+            
+
+            console.log("function is working",array[elment])
+        }
+    </script>
+</body>
+</html>

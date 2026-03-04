@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        .containner{
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+            gap: 1%;
+        }
+        .input{
+            padding: 1%;
+        }
+
+         button {
+      padding: 8px 15px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+  #results {
+  margin: 20px auto;   /* centers horizontally */
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically inside */
+  border: 1px solid black;
+  height: 300px;
+  width: 400px;
+}
+
+
+    </style>
+</head>
+<body>
+
+
+    <h1>TABLE GENRATOR</h1>
+
+    <div class="containner">
+    <input id="input" class="input" type="text" placeholder="enter the Table number" />
+    <button onclick="TableGenratore()">TABLE</button>
+
+    </div>
+
+    <div id="results"></div>
+    <script src="../JAVASCRIPT/app.js"></script>
+</body>
+</html>
